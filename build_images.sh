@@ -1,5 +1,7 @@
  #!/bin/bash
 
+go get -u github.com/gorilla/mux
+
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o "apps/admin/containers/main" "apps/admin/containers/main.go" "apps/admin/containers/kubernetes.go"
 
 gcloud container builds submit "apps/admin/containers/." --tag=$DOCKERREPO/admin

@@ -16,7 +16,7 @@ kind: Ingress
 metadata:
   name: wap-ingress
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: %INGRESSNAME%
+    kubernetes.io/ingress.global-static-ip-name: whack-a-pod-ingress
 spec:
   rules:
   - http:

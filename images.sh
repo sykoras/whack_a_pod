@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Copyright 2018 ROI Training, Inc. All Rights Reserved.
 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,15 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRoleBinding
-metadata:
-  name: fabric8-rbac
-subjects:
-  - kind: ServiceAccount
-    name: default
-    namespace: default
-roleRef:
-  kind: ClusterRole
-  name: cluster-admin
-  apiGroup: rbac.authorization.k8s.io
+go get -u github.com/gorilla/mux
+
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o "apps/admin/containers/main" "apps/admin/containers/main.go" "apps/admin/containers/kubernetes.go"
+
+gcloud container builds submit "apps/admin/containers/." --tag=$DOCKERREPO/admin
+
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o "apps/api/containers/main" "apps/api/containers/main.go"
+gcloud container builds submit "apps/api/containers/." --tag=$DOCKERREPO/api
+
+gcloud container builds submit "apps/game/containers/." --tag=$DOCKERREPO/game

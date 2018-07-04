@@ -1,4 +1,6 @@
-# Copyright 2017 Google Inc. All Rights Reserved.
+#!/bin/bash
+
+# Copyright 2018 ROI Training, Inc. All Rights Reserved.
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,25 +14,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: wap-ingress
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: whack-a-pod-ingress
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /api/*
-        backend:
-          serviceName: api
-          servicePort: 8080
-      - path: /admin/*
-        backend:
-          serviceName: admin
-          servicePort: 8080
-      - path: /*
-        backend:
-          serviceName: game
-          servicePort: 8080
+gcloud container clusters create $CLUSTER
+# gcloud

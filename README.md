@@ -8,7 +8,7 @@ Use either the version available at /next.html, or the more advanced version at 
 
 1. Create Project in Cloud Console
 1. Open Cloud Shell
-1. Clone this repo `git clone /https://github.com/roitraining/whack_a_pod`
+1. Clone this repo `git clone https://github.com/roitraining/whack_a_pod`
 1. Change directories into repo `cd whack_a_pod`
 1. To enable services and set variables, run `. ./env.sh`
 1. To create the GKE cluster, run `. ./cluster.sh`
@@ -21,10 +21,11 @@ You will need to wait a good 5-7 minutes after the deployments for the Ingress t
 ## Run demo
 There are two skins to the game.
 1. Visit <ingress-ip>/advanced.html
-2. Show nodes and pods in GUI
-3. Show pod info in log pane on right side
-4. Kill one pod, show it terminating and then respawning in log pane
-5. Play around and make your points
+1. Click to deploy
+1. Show nodes and pods in GUI
+1. Show pod info in log pane on right side
+1. Kill one pod, show it terminating and then respawning in log pane
+1. Play around and make your points
 
 ### Clean Up
 1. Open a terminal in `/`.

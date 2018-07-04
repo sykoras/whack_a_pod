@@ -14,19 +14,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# set cluster variables
 export NODEDISKSIZE=200
 export NODECOUNT=2
 export NODETYPE=n1-standard-4
-
 export PROJECT=$DEVSHELL_PROJECT_ID
 export ZONE=us-central1-c
 export REGION=us-central1
 export CLUSTER=whack-a-pod
 
+# set contrainer registry variable
 export DOCKERREPO=gcr.io/$PROJECT
 
+# set ingress variable
 export INGRESSNAME=whack-a-pod-ingress
 
+# enable the needed services
 gcloud services enable compute.googleapis.com
 gcloud services enable container.googleapis.com
 gcloud services enable containerregistry.googleapis.com

@@ -14,5 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-gcloud container clusters create $CLUSTER
-# gcloud
+kubectl delete ingress wap-ingress
+gcloud compute addresses delete whack-a-pod-ingress --global
+gcloud container clusters delete $CLUSTER

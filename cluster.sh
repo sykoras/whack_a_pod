@@ -21,4 +21,5 @@ gcloud container clusters create $CLUSTER \
   --zone=$ZONE \
   --verbosity=error
 
+# need to modify rbac so app will run
 kubectl create -f rbac.yaml

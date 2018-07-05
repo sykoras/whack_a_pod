@@ -28,10 +28,7 @@ There are two skins to the game.
 1. Play around and make your points
 
 ### Clean Up
-1. Open a terminal in `/`.
-1. Run `make clean`
-1. Open a terminal in `/infrastructure/`.
-1. Run `make clean`
+1. In Cloud Shell, run . ./clean
 
 
 ## Architecture

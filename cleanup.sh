@@ -15,5 +15,5 @@
 # limitations under the License.
 
 kubectl delete ingress wap-ingress
-gcloud compute addresses delete whack-a-pod-ingress --global
-gcloud container clusters delete $CLUSTER
+gcloud compute addresses delete whack-a-pod-ingress --global --quiet
+gcloud container clusters delete $CLUSTER --zone $ZONE --quiet

@@ -18,17 +18,20 @@ Use either the version available at /next.html, or the more advanced version at 
 You will need to wait a good 5-7 minutes after the deployments for the Ingress to be functional.
 
 
-## Run demo
-There are two skins to the game.
+## Run demo - advanced skin
+1. Find the pod external ip with `kubectl get ingress wap-ingress`
 1. Visit <ingress-ip>/advanced.html
 1. Click to deploy
 1. Show nodes and pods in GUI
 1. Show pod info in log pane on right side
 1. Kill one pod, show it terminating and then respawning in log pane
-1. Play around and make your points
+1. Kill multiple pods and show them being replaced
+1. Kill one node and show all pods on another node
+1. Reinstate node and kill some nodes to show respawning on new node
+1. Show yaml files, etc.
 
 ### Clean Up
-1. In Cloud Shell, run . ./clean
+1. In Cloud Shell, run . ./cleanup.sh
 
 
 ## Architecture

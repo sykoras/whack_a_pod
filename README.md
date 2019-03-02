@@ -13,14 +13,15 @@ Use either the version available at /next.html, or the more advanced version at 
 1. To enable services and set variables, run `. ./env.sh`
 1. To create the GKE cluster, run `. ./cluster.sh`
 1. To build the images, run `. ./images.sh`
-1. To deploy app and serices, run `. ./deploy.sh`
+> __Warning__ This fails sometimes with 403 error. If it does, simply redo the `gcloud push` that failed
+8. To deploy app and serices, run `. ./deploy.sh`
 
 You will need to wait a good 5-7 minutes after the deployments for the Ingress to be functional.
 
 
 ## Run demo - advanced skin
 1. Find the pod external ip with `kubectl get ingress wap-ingress`
-1. Visit <ingress-ip>/advanced.html
+1. Visit `<ingress-ip>/advanced.html`
 1. Click to deploy
 1. Show nodes and pods in GUI
 1. Show pod info in log pane on right side

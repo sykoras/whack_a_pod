@@ -33,3 +33,4 @@ export INGRESSNAME=whack-a-pod-ingress
 gcloud services enable compute.googleapis.com
 gcloud services enable container.googleapis.com
 gcloud services enable containerregistry.googleapis.com
+gcloud services enable cloudbuild.googleapis.com

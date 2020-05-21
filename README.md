@@ -8,7 +8,7 @@ Use either the version available at /next.html, or the more advanced version at 
 
 1. Create Project in Cloud Console
 1. Open Cloud Shell
-1. Clone this repo `git clone https://github.com/roitraining/whack_a_pod`
+1. Clone this repo `git clone https://github.com/sykoras/whack_a_pod`
 1. Change directories into repo `cd whack_a_pod`
 1. To enable services and set variables, run `. ./env.sh`
 1. To create the GKE cluster, run `. ./cluster.sh`
